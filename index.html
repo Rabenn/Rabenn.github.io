@@ -8,18 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="text-2xl font-extrabold text-blue-600 tracking-tight">RLG</a>
             <div class="space-x-8 text-sm font-medium text-gray-700">
                 <a href="#proyectos" class="hover:text-blue-600 transition">Proyectos</a>
                 <a href="#sobre-mi" class="hover:text-blue-600 transition">Sobre mí</a>
-                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Contacto</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition shadow-md shadow-blue-200">Contacto</a>
             </div>
         </div>
     </nav>
@@ -27,19 +27,20 @@
     <section class="bg-white py-24 md:py-32">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <span class="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-6">
-                Disponible para nuevos retos
+                Disponible para nuevos proyectos en 2026
             </span>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-gray-950 mb-6">
-                Hola, soy <span class="text-blue-600">Rubén</span>. Creo experiencias digitales.
+                Hola, soy <span class="text-blue-600">Rubén</span>. <br>Desarrollador de Software.
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12">
-                Desarrollador enfocado en construir productos web modernos, intuitivos y de alto rendimiento. Especializado en transformar ideas complejas en interfaces limpias. </p>
-            <div class="flex gap-4 justify-center">
-                <a href="#proyectos" class="text-lg bg-gray-950 text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-800 transition">
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Especializado en crear soluciones digitales robustas y escalables. Me apasiona transformar problemas complejos en software elegante y eficiente.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#proyectos" class="text-lg bg-gray-950 text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-800 transition duration-300">
                     Ver mis proyectos
                 </a>
-                <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="text-lg bg-gray-100 text-gray-900 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
-                    LinkedIn →
+                <a href="#contacto" class="text-lg bg-gray-100 text-gray-900 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition duration-300">
+                    Saber más sobre mí
                 </a>
             </div>
         </div>
@@ -47,84 +48,143 @@
 
     <section id="proyectos" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-extrabold tracking-tight text-gray-950 mb-16 text-center">Mis Proyectos Destacados</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold tracking-tight text-gray-950 mb-4">Proyectos Destacados</h2>
+                <p class="text-gray-600">Una selección de mis trabajos más recientes y retos técnicos.</p>
+            </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-100 hover:shadow-lg transition">
-                    <div class="mb-5 text-blue-600"> <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="mb-5 text-blue-600 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-2xl"> 
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-950">Aplicación Web Alpha</h3>
-                    <p class="text-gray-600 mb-6 text-sm">Plataforma SaaS para la gestión de equipos construida con React, Node.js y PostgreSQL.</p>
-                    <div class="flex gap-2 mb-6"> <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React</span>
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">SaaS</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-950">Sistema de Gestión ERP</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Optimización de procesos internos para empresas con arquitectura de microservicios y despliegue en la nube.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"> 
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">Java</span>
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">Spring Boot</span>
                     </div>
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:underline">Ver Proyecto →</a>
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800">Ver Detalles <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></a>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-100 hover:shadow-lg transition">
-                    <div class="mb-5 text-blue-600">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="mb-5 text-blue-600 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-950">E-commerce Portal Beta</h3>
-                    <p class="text-gray-600 mb-6 text-sm">Tienda online optimizada para móvil con pasarela de pago integrada y panel de administración.</p>
-                    <div class="flex gap-2 mb-6">
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Next.js</span>
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Tailwind</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-950">E-commerce API</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Desarrollo de una API RESTful de alto rendimiento con integración de pagos segura y gestión de inventario real-time.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">Python</span>
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">FastAPI</span>
                     </div>
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:underline">Ver Proyecto →</a>
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800">Ver Detalles <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></a>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-100 hover:shadow-lg transition">
-                    <div class="mb-5 text-blue-600">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="mb-5 text-blue-600 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-950">Dashboard de Datos</h3>
-                    <p class="text-gray-600 mb-6 text-sm">Visualización de datos en tiempo real para análisis de métricas empresariales clave.</p>
-                    <div class="flex gap-2 mb-6">
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Vue.js</span>
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">D3.js</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-950">Data Insight Dashboard</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Plataforma de visualización de datos complejos mediante gráficos interactivos y análisis predictivo.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">JavaScript</span>
+                        <span class="bg-blue-50 text-blue-700 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-lg">Tailwind</span>
                     </div>
-                    <a href="#" class="text-sm font-semibold text-blue-600 group-hover:underline">Ver Proyecto →</a>
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800">Ver Detalles <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="sobre-mi" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl font-extrabold tracking-tight text-gray-950 mb-6">Apasionado por la tecnología y el buen diseño.</h2>
-                <p class="text-lg text-gray-600 mb-6">
-                    Con más de [X] años de experiencia, disfruto colaborando en equipos multidisciplinares para crear soluciones que no solo funcionen bien, sino que también sean un placer usar. Me encanta aprender nuevas tecnologías y enfrentarme a retos complejos.
+                <h2 class="text-4xl font-extrabold tracking-tight text-gray-950 mb-6">Construyendo el futuro línea a línea.</h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Soy un desarrollador apasionado por el aprendizaje continuo. Mi enfoque se basa en la escritura de código limpio y mantenible, priorizando siempre la experiencia del usuario y la eficiencia del sistema.
                 </p>
-                <div class="grid grid-cols-2 gap-4 text-sm font-medium text-gray-800">
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> Frontend (React/Vue)</div>
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> UX/UI Design</div>
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> Backend (Node/Python)</div>
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> Git & CI/CD</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-2xl flex items-center gap-3 border border-gray-100 shadow-sm">
+                        <div class="text-blue-600 font-bold text-xl">01</div>
+                        <div class="text-sm font-bold text-gray-800">Desarrollo Fullstack</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl flex items-center gap-3 border border-gray-100 shadow-sm">
+                        <div class="text-blue-600 font-bold text-xl">02</div>
+                        <div class="text-sm font-bold text-gray-800">Diseño UX/UI</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl flex items-center gap-3 border border-gray-100 shadow-sm">
+                        <div class="text-blue-600 font-bold text-xl">03</div>
+                        <div class="text-sm font-bold text-gray-800">Arquitectura Cloud</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-2xl flex items-center gap-3 border border-gray-100 shadow-sm">
+                        <div class="text-blue-600 font-bold text-xl">04</div>
+                        <div class="text-sm font-bold text-gray-800">Bases de Datos</div>
+                    </div>
                 </div>
             </div>
-            <div class="aspect-square bg-gray-100 rounded-3xl border border-gray-100 flex items-center justify-center text-gray-400">
-                Tu foto aquí
+
+            <div class="bg-gray-950 rounded-[2.5rem] p-10 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-600 rounded-full blur-[80px] opacity-40"></div>
+                <h3 class="text-2xl font-bold mb-8 relative z-10">Stack Tecnológico</h3>
+                <div class="space-y-6 relative z-10">
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2 opacity-70">Backend (Java/Python)</div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-blue-500 h-2 rounded-full w-[90%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2 opacity-70">Frontend (JavaScript/React)</div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-blue-400 h-2 rounded-full w-[85%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2 opacity-70">Databases (SQL/NoSQL)</div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-blue-300 h-2 rounded-full w-[80%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest mb-2 opacity-70">DevOps & Git</div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full"><div class="bg-indigo-400 h-2 rounded-full w-[75%]"></div></div>
+                    </div>
+                </div>
+                <div class="mt-10 pt-10 border-t border-gray-800 flex items-center justify-between">
+                    <div class="text-xs text-gray-400">Certificado por <br><span class="text-white font-bold tracking-tight">OpenSource Academy</span></div>
+                    <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z"></path></svg>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-24 bg-blue-600">
-        <div class="max-w-4xl mx-auto px-6 text-center text-white">
-            <h2 class="text-5xl font-extrabold tracking-tighter mb-6">¿Hablamos?</h2>
+    <section id="contacto" class="py-24 bg-blue-600 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20%" cy="20%" r="200" stroke="white" stroke-width="2"/>
+                <circle cx="80%" cy="80%" r="300" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center text-white relative z-10">
+            <h2 class="text-5xl font-extrabold tracking-tighter mb-6">¿Trabajamos juntos?</h2>
             <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
-                Si tienes un proyecto en mente, quieres colaborar o simplemente decir hola, mi bandeja de entrada siempre está abierta.
+                Estoy siempre buscando nuevos retos y colaboraciones interesantes. Si tienes una idea, ¡hagámosla realidad!
             </p>
-            <a href="mailto:tu-email@dominio.com" class="text-lg bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-50 transition shadow-lg">
-                Enviar un email →
-            </a>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="mailto:rubenxioluna@gmail.com" class="text-lg bg-white text-blue-600 px-10 py-4 rounded-2xl font-bold hover:bg-blue-50 transition shadow-2xl">
+                    Enviar un email
+                </a>
+                <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="text-lg border-2 border-white/30 backdrop-blur-sm text-white px-10 py-4 rounded-2xl font-bold hover:bg-white/10 transition">
+                    LinkedIn
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-gray-50 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-            <p>&copy; 2026 Rubén Luna Gómez. Todos los derechos reservados.</p>
+    <footer class="py-12 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-xl font-bold text-gray-900 tracking-tight">RLG<span class="text-blue-600">.</span></div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Rubén Luna Gómez.
+            </div>
+            <div class="flex space-x-6 text-gray-400">
+                <a href="#" class="hover:text-blue-600 transition">Github</a>
+                <a href="#" class="hover:text-blue-600 transition">Twitter</a>
+            </div>
         </div>
     </footer>
 
